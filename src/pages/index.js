@@ -2,49 +2,68 @@ import React from "react"
 import Layout from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
-const Index = () => {
+import BackgroundImage from "gatsby-background-image"
+import { graphql } from "gatsby"
+const Index = props => {
   return (
     <Layout>
       <Seo title="Kartblue" />
-      <section className="main bodyimage">
-        <div className="container">
-          <div className="leftcontent">
-            <h1 className="mainheading">
-              You have a great idea,
-              <span className="lightfont"> but now what?</span>
-            </h1>
-            <p className="highlights">
-              Worry not, as KartBlue will fill in the void, and help you make
-              your worthy idea a grand reality.
-            </p>
-            <p>
-              Watch as your projects come to life in exceptional quality,
-              carefully made with the best resources from our trusted allies.
-            </p>
+
+      <StaticImage
+        src="../images/mainbg.png"
+        className="heropattern"
+        alt="patternbg"
+        placeholder="blurred"
+      />
+      <section className="main">
+        <BackgroundImage
+          className="heroimage1"
+          fluid={props.data.mainbgpattern.childImageSharp.fluid}
+        >
+          <div className="container">
+            <div className="leftcontent">
+              <h1 className="mainheading">
+                You have a great idea,
+                <span className="lightfont"> but now what?</span>
+              </h1>
+              <p className="highlights">
+                Worry not, as KartBlue will fill in the void, and help you make
+                your worthy idea a grand reality.
+              </p>
+              <p>
+                Watch as your projects come to life in exceptional quality,
+                carefully made with the best resources from our trusted allies.
+              </p>
+            </div>
           </div>
-        </div>
+        </BackgroundImage>
       </section>
 
       <section className="about" id="about">
         <div className="container">
           <div className="aboutwrapper">
-            <div className="aboutdiv">
-              <h1>about</h1>
-              <h2 className="subtitile">our belief</h2>
-              <p>
-                Karblue is a technology company that connects business and the
-                customers by providing consultancy, technology , skilled
-                resources and innovative ideas. We at Kartblue nurtures
-                innovation and product ideas, by combining the technology and
-                investment it needs.
-              </p>
-              <p>
-                We build the bridge between businesses and IT companies,
-                providing expertise and bringing all our skills in project
-                management to the table. Our contract and values will help
-                companies to develop without any hassle.
-              </p>
-            </div>
+            <BackgroundImage
+              fluid={props.data.aboutImage.childImageSharp.fluid}
+              className="aboutpattern"
+            >
+              <div className="aboutdiv">
+                <h1>about</h1>
+                <h2 className="subtitile">our belief</h2>
+                <p>
+                  Karblue is a technology company that connects business and the
+                  customers by providing consultancy, technology , skilled
+                  resources and innovative ideas. We at Kartblue nurtures
+                  innovation and product ideas, by combining the technology and
+                  investment it needs.
+                </p>
+                <p>
+                  We build the bridge between businesses and IT companies,
+                  providing expertise and bringing all our skills in project
+                  management to the table. Our contract and values will help
+                  companies to develop without any hassle.
+                </p>
+              </div>
+            </BackgroundImage>
             <div className="mainservices">
               <h3>Consultancy</h3>
               <p>
@@ -156,123 +175,131 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="marketplace bodyimage1">
-        <div className="container">
-          <h1>Marketplace Management</h1>
-          <div className="marketplacewrapper">
-            <div className="colum1">
-              <h2>
-                Looking for someone to manage your marketplace and to develop
-                your online business ?
-              </h2>
-              <p>
-                Search no further, Kartblue is your winner. We are a team of
-                e-commerce professionals with expertise in creating wealthy
-                revenue using your online presence. We manage all e-marketplaces
-                there is, for you. Stop wasting time to wrap your head around
-                how they work, we at kart blue know all and can do all about it.
-              </p>
-            </div>
-            <div className="column2">
-              <h3>Why do we management market place ?</h3>
-              <p>
-                The answer is : Our team have past experience in building online
-                businesses.
-              </p>
-              <p>
-                We have seen many good products in rural areas suffering to get
-                marketing reach. There is always a big gap between the seller
-                and the shopper and obviously it is not practical for the seller
-                to spend precious limited time learning complex concepts like
-                online marketing. We keep this promise to our customers to make
-                their online presence hale and hearty so they can get orders
-                online, investing much time to create their online catalogue and
-                generate sales through various channels. We have only succeeded
-                when your business earns and becomes successful. We want to make
-                this happen with our full heart approach, with the help of our
-                dedicated team. We believe we can empower our people by helping
-                them to build a remarkable market place.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="container">
-          <div className="marketplacewrapper1">
-            <div className="subbox1">
-              <h5>Amazon Advert</h5>
-              <div className="bgimage">
-                <div className="bluebg">
-                  <StaticImage
-                    src="../images/amazon-icon.svg"
-                    alt="amazon icon"
-                    placeholder="tracedSVG"
-                  />
-                  <p>
-                    From using AV to sponsored ads and everything in between,
-                    Kartblue can help your product to catch and demand your
-                    target audiences’ attention, on the prominent global
-                    e-commerce platform, Amazon.
-                  </p>
-                </div>
+      <section className="marketplace">
+        <BackgroundImage
+          className="marketplacebg"
+          fluid={props.data.marketImage.childImageSharp.fluid}
+        >
+          <div className="container">
+            <h1>Marketplace Management</h1>
+            <div className="marketplacewrapper">
+              <div className="colum1">
+                <h2>
+                  Looking for someone to manage your marketplace and to develop
+                  your online business ?
+                </h2>
+                <p>
+                  Search no further, Kartblue is your winner. We are a team of
+                  e-commerce professionals with expertise in creating wealthy
+                  revenue using your online presence. We manage all
+                  e-marketplaces there is, for you. Stop wasting time to wrap
+                  your head around how they work, we at kart blue know all and
+                  can do all about it.
+                </p>
               </div>
-            </div>
-
-            <div className="subbox2">
-              <h5>E-com Cataloguing </h5>
-              <div className="bgimage">
-                <div className="greyebg">
-                  <StaticImage
-                    src="../images/ecat-icon.svg"
-                    alt="catalogu icon"
-                    placeholder="tracedSVG"
-                  />
-                  <p>
-                    List ALL your products on leading e-commerce platforms, with
-                    persuasive and informing descriptions, making sure that the
-                    significance of your product is known to prospective
-                    customers and shoppers. With absolutely no misinformation,
-                    our clients can enjoy passionate loyalty and goodwill.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="subbox3">
-              <h5>E-com Branding</h5>
-              <div className="bgimage">
-                <div className="greyebg">
-                  <StaticImage
-                    src="../images/branding-icon.svg"
-                    alt="branding icon"
-                    placeholder="tracedSVG"
-                  />
-                  <p>
-                    Make your brand known among shoppers galore. Intensify your
-                    reach, plus extend your name and generate goodwill, within
-                    and beyond borders.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="subbox4">
-              <h5>E-com Cataloguing </h5>
-              <div className="bgimage">
-                <div className="bluebg">
-                  <StaticImage src="../images/account-icon.svg" alt="" />
-                  <p>
-                    The best part of all is, you don’t have to worry about
-                    keeping track of your products and services online. We
-                    create seller registration account for your firm in all
-                    major marketplaces including flipkart and amazon. We offer
-                    to manage your account needs promptly and efficiently.
-                  </p>
-                </div>
+              <div className="column2">
+                <h3>Why do we management market place ?</h3>
+                <p>
+                  The answer is : Our team have past experience in building
+                  online businesses.
+                </p>
+                <p>
+                  We have seen many good products in rural areas suffering to
+                  get marketing reach. There is always a big gap between the
+                  seller and the shopper and obviously it is not practical for
+                  the seller to spend precious limited time learning complex
+                  concepts like online marketing. We keep this promise to our
+                  customers to make their online presence hale and hearty so
+                  they can get orders online, investing much time to create
+                  their online catalogue and generate sales through various
+                  channels. We have only succeeded when your business earns and
+                  becomes successful. We want to make this happen with our full
+                  heart approach, with the help of our dedicated team. We
+                  believe we can empower our people by helping them to build a
+                  remarkable market place.
+                </p>
               </div>
             </div>
           </div>
-        </div>
+
+          <div className="container">
+            <div className="marketplacewrapper1">
+              <div className="subbox1">
+                <h5>Amazon Advert</h5>
+                <div className="bgimage">
+                  <div className="bluebg">
+                    <StaticImage
+                      src="../images/amazon-icon.svg"
+                      alt="amazon icon"
+                      placeholder="tracedSVG"
+                    />
+                    <p>
+                      From using AV to sponsored ads and everything in between,
+                      Kartblue can help your product to catch and demand your
+                      target audiences’ attention, on the prominent global
+                      e-commerce platform, Amazon.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="subbox2">
+                <h5>E-com Cataloguing </h5>
+                <div className="bgimage">
+                  <div className="greyebg">
+                    <StaticImage
+                      src="../images/ecat-icon.svg"
+                      alt="catalogu icon"
+                      placeholder="tracedSVG"
+                    />
+                    <p>
+                      List ALL your products on leading e-commerce platforms,
+                      with persuasive and informing descriptions, making sure
+                      that the significance of your product is known to
+                      prospective customers and shoppers. With absolutely no
+                      misinformation, our clients can enjoy passionate loyalty
+                      and goodwill.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="subbox3">
+                <h5>E-com Branding</h5>
+                <div className="bgimage">
+                  <div className="greyebg">
+                    <StaticImage
+                      src="../images/branding-icon.svg"
+                      alt="branding icon"
+                      placeholder="tracedSVG"
+                    />
+                    <p>
+                      Make your brand known among shoppers galore. Intensify
+                      your reach, plus extend your name and generate goodwill,
+                      within and beyond borders.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="subbox4">
+                <h5>E-com Cataloguing </h5>
+                <div className="bgimage">
+                  <div className="bluebg">
+                    <StaticImage src="../images/account-icon.svg" alt="" />
+                    <p>
+                      The best part of all is, you don’t have to worry about
+                      keeping track of your products and services online. We
+                      create seller registration account for your firm in all
+                      major marketplaces including flipkart and amazon. We offer
+                      to manage your account needs promptly and efficiently.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </BackgroundImage>
       </section>
 
       <section className="benifits">
@@ -336,101 +363,155 @@ const Index = () => {
       </section>
 
       <section className="form" id="contact">
-        <div className="container">
-          <div className="formwrapper">
-            <h1>Get in touch!</h1>
-            <h4>
-              Contact is key, unlock your ideas and discuss with us your needs.
-            </h4>
-            <div className="sendform">
-              <form
-                name="kartblue"
-                method="POST"
-                action="/success"
-                data-netlify-recaptcha="true"
-                data-netlify="true"
-              >
-                <div className="fields">
-                  <div className="field">
-                    <input
-                      required
-                      type="text"
-                      name="name"
-                      placeholder="Name"
-                      id="name"
-                    />
+        <BackgroundImage
+          className="contactbg"
+          fluid={props.data.contactbgImage.childImageSharp.fluid}
+        >
+          <div className="container">
+            <div className="formwrapper">
+              <h1>Get in touch!</h1>
+              <h4>
+                Contact is key, unlock your ideas and discuss with us your
+                needs.
+              </h4>
+              <div className="sendform">
+                <form
+                  name="kartblue"
+                  method="POST"
+                  action="/success"
+                  data-netlify-recaptcha="true"
+                  data-netlify="true"
+                >
+                  <div className="fields">
+                    <div className="field">
+                      <input
+                        required
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        id="name"
+                      />
+                    </div>
+                    <div className="field">
+                      <input
+                        required
+                        type="number"
+                        name="number"
+                        placeholder="Mobile Number"
+                        id="mobilenumber"
+                      />
+                    </div>
+                    <div className="field">
+                      <input
+                        required
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        id="email"
+                      />
+                    </div>
+                    <div className="field">
+                      <input
+                        type="text"
+                        name="Address"
+                        placeholder="Address"
+                        id="address"
+                      />
+                    </div>
                   </div>
-                  <div className="field">
-                    <input
-                      required
-                      type="number"
-                      name="number"
-                      placeholder="Mobile Number"
-                      id="mobilenumber"
-                    />
-                  </div>
-                  <div className="field">
-                    <input
-                      required
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      id="email"
-                    />
-                  </div>
-                  <div className="field">
-                    <input
-                      type="text"
-                      name="Address"
-                      placeholder="Address"
-                      id="address"
-                    />
-                  </div>
-                </div>
-                <div className="fields1">
-                  <div className="field">
-                    <select required type="text" name="services" id="services">
-                      <option value="" disabled selected>
-                        Select Services
-                      </option>
-                      <option value="Consultancy">Consultancy</option>
-                      <option value="Digital Marketing">
-                        Digital Marketing
-                      </option>
-                      <option value="Marketplace Management">
-                        Marketplace Management
-                      </option>
-                      <option value="Resource Placement">
-                        Resource Placement
-                      </option>
-                    </select>
-                  </div>
+                  <div className="fields1">
+                    <div className="field">
+                      <select
+                        required
+                        type="text"
+                        name="services"
+                        id="services"
+                      >
+                        <option value="" disabled selected>
+                          Select Services
+                        </option>
+                        <option value="Consultancy">Consultancy</option>
+                        <option value="Digital Marketing">
+                          Digital Marketing
+                        </option>
+                        <option value="Marketplace Management">
+                          Marketplace Management
+                        </option>
+                        <option value="Resource Placement">
+                          Resource Placement
+                        </option>
+                      </select>
+                    </div>
 
-                  <div className="field">
-                    <textarea
-                      required
-                      name="message"
-                      placeholder="Message"
-                      rows="7"
-                    ></textarea>
-                  </div>
+                    <div className="field">
+                      <textarea
+                        required
+                        name="message"
+                        placeholder="Message"
+                        rows="7"
+                      ></textarea>
+                    </div>
 
-                  <div data-netlify-recaptcha="true"></div>
-                </div>
-                <div className="actions">
-                  <input
-                    type="submit"
-                    value="Send Message"
-                    className="buttonsubmit"
-                  />
-                </div>
-              </form>
+                    <div data-netlify-recaptcha="true"></div>
+                  </div>
+                  <div className="actions">
+                    <input
+                      type="submit"
+                      value="Send Message"
+                      className="buttonsubmit"
+                    />
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
+        </BackgroundImage>
       </section>
     </Layout>
   )
 }
 
 export default Index
+
+export const pageQuery = graphql`
+  query {
+    successImage: file(relativePath: { eq: "mainbg.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    aboutImage: file(relativePath: { eq: "about-pattern.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    marketImage: file(relativePath: { eq: "patterntop.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    mainbgpattern: file(relativePath: { eq: "patterntop.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    contactbgImage: file(relativePath: { eq: "contact-bg.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

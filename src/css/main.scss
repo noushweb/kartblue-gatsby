@@ -233,7 +233,40 @@ a:active {
   background-size: 50%;
   background-attachment: fixed;
 }
+.heropattern {
+  background-size: contain;
+  width: 50%;
+  height: 90vh;
+  background-position: right top;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+}
 
+.heroimage1 {
+  width: 100%;
+  height: 100vh;
+  background-size: contain;
+  background-position: left top;
+}
+.aboutpattern {
+  width: 100%;
+  height: inherit;
+  background-size: 200px;
+  background-position: 300px 50px;
+}
+.marketplacebg {
+  width: inherit;
+  height: inherit;
+  background-size: contain;
+  background-position: right top;
+}
+.contactbg {
+  width: 100%;
+  height: 80vh;
+  background-size: 60%;
+  background-position: center top;
+}
 .aboutwrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -244,9 +277,9 @@ a:active {
   border-style: solid;
   border-width: 1px;
   padding: 7em 3em 0em 3em;
-  background-image: url("../images/about-pattern.svg");
-  background-position: 332px 40px;
-  background-repeat: no-repeat;
+  // background-image: url("../images/about-pattern.svg");
+  // background-position: 332px 40px;
+  // background-repeat: no-repeat;
 }
 h1 {
   font-size: 2.9em;
@@ -740,28 +773,58 @@ footer {
 .hidden {
   display: none;
 }
-
+.heroimage2 {
+  width: 100%;
+  height: 70vh;
+  background-size: 50%;
+  background-position: right bottom;
+}
 @media screen and (max-width: 550px) {
   body {
-    background-image: url("../images/patterntop.svg");
+    // background-image: url("../images/patterntop.svg");
     background-position: 1% 1%;
     background-repeat: no-repeat;
     background-size: 100%;
   }
-  .bodyimage {
-    background-image: url("../images/patterntop.svg");
-    background-position: left 560px;
-    background-repeat: no-repeat;
-    background-size: 73%;
-    background-attachment: scroll;
-  }
 
   .aboutdiv {
-    padding: 7em 2em 0em 2em;
+    padding: 2em 2em 0em 2em;
     background-size: 50%;
     background-position: 144px 32px;
   }
+  .heropattern {
+    background-size: contain;
+    width: 600px;
+    height: 500px;
+    position: relative;
+    top: 100px;
+    display: none;
+  }
 
+  .heroimage1 {
+    width: 100%;
+    height: 92vh;
+    background-size: 10px;
+    background-position: right bottom;
+    opacity: 0.1;
+  }
+
+  .aboutpattern {
+    background-size: 200px;
+    background-position: 200px 50px !important;
+  }
+  .marketplacebg {
+    width: inherit;
+    height: inherit;
+    background-size: contain;
+    background-position: right top;
+  }
+  .contactbg {
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+    background-position: center center;
+  }
   .mainservices {
     gap: 0.5em;
     padding: 2em;
@@ -791,7 +854,7 @@ footer {
 
   .main {
     padding-top: 15em;
-    height: 70vh;
+    height: 90vh;
   }
 
   .linktoform {
