@@ -15,6 +15,7 @@ const Header = () => {
                   src="../images/logo.svg"
                   alt="kartblue logo"
                   className="mainlogo"
+                  placeholder="tracedSVG"
                 />
               </Link>
               <button className="nav-btn" onClick={() => setShow(!show)}>
@@ -22,6 +23,7 @@ const Header = () => {
                   src="../images/menu.svg"
                   alt="menuicon"
                   className="burgericon"
+                  placeholder="tracedSVG"
                 />
               </button>
             </div>

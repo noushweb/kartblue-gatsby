@@ -26,6 +26,8 @@ const Footer = () => {
                   <StaticImage
                     src="../images/facebook.svg"
                     alt="facbook icon"
+                    className="smimg"
+                    placeholder="tracedSVG"
                   />
                 </a>
               </li>
@@ -34,6 +36,8 @@ const Footer = () => {
                   <StaticImage
                     src="../images/instagram.svg"
                     alt="instagram icom"
+                    className="smimg"
+                    placeholder="tracedSVG"
                   />
                 </a>
               </li>
@@ -42,12 +46,19 @@ const Footer = () => {
                   <StaticImage
                     src="../images/linkedin.svg"
                     alt="linkedin icon"
+                    className="smimg"
+                    placeholder="tracedSVG"
                   />
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/Kartblueconsult?s=08">
-                  <StaticImage src="../images/twitter.svg" alt="twitter icon" />
+                  <StaticImage
+                    src="../images/twitter.svg"
+                    alt="twitter icon"
+                    className="smimg"
+                    placeholder="tracedSVG"
+                  />
                 </a>
               </li>
             </ul>

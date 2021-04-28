@@ -10,7 +10,7 @@ const Index = () => {
         <div className="container">
           <div className="leftcontent">
             <h1 className="mainheading">
-              You have a great idea,{" "}
+              You have a great idea,
               <span className="lightfont"> but now what?</span>
             </h1>
             <p className="highlights">
@@ -100,7 +100,11 @@ const Index = () => {
           </div>
 
           <div className="digitalserviceswrpper">
-            <StaticImage src="../images/digitalimage.jpg" alt="digital image" />
+            <StaticImage
+              src="../images/digitalimage.jpg"
+              alt="digital image"
+              placeholder="blurred"
+            />
 
             <div className="digitaldiv">
               <h1>Digital Marketing </h1>
@@ -143,7 +147,11 @@ const Index = () => {
               </a>
             </div>
 
-            <StaticImage src="../images/resourceimage.jpg" alt="resource" />
+            <StaticImage
+              src="../images/resourceimage.jpg"
+              alt="resource"
+              placeholder="blurred"
+            />
           </div>
         </div>
       </section>
@@ -195,7 +203,11 @@ const Index = () => {
               <h5>Amazon Advert</h5>
               <div className="bgimage">
                 <div className="bluebg">
-                  <StaticImage src="../images/amazon-icon.svg" alt="" />
+                  <StaticImage
+                    src="../images/amazon-icon.svg"
+                    alt="amazon icon"
+                    placeholder="tracedSVG"
+                  />
                   <p>
                     From using AV to sponsored ads and everything in between,
                     Kartblue can help your product to catch and demand your
@@ -210,7 +222,11 @@ const Index = () => {
               <h5>E-com Cataloguing </h5>
               <div className="bgimage">
                 <div className="greyebg">
-                  <StaticImage src="../images/ecat-icon.svg" alt="" />
+                  <StaticImage
+                    src="../images/ecat-icon.svg"
+                    alt="catalogu icon"
+                    placeholder="tracedSVG"
+                  />
                   <p>
                     List ALL your products on leading e-commerce platforms, with
                     persuasive and informing descriptions, making sure that the
@@ -226,7 +242,11 @@ const Index = () => {
               <h5>E-com Branding</h5>
               <div className="bgimage">
                 <div className="greyebg">
-                  <StaticImage src="../images/branding-icon.svg" alt="" />
+                  <StaticImage
+                    src="../images/branding-icon.svg"
+                    alt="branding icon"
+                    placeholder="tracedSVG"
+                  />
                   <p>
                     Make your brand known among shoppers galore. Intensify your
                     reach, plus extend your name and generate goodwill, within
@@ -260,7 +280,11 @@ const Index = () => {
           <h1>Benefits of working with us</h1>
           <div className="benifitswrapper">
             <div className="colum1">
-              <StaticImage src="../images/best.jpg" alt="" />
+              <StaticImage
+                src="../images/best.jpg"
+                alt="benifits image"
+                placeholder="blurred"
+              />
 
               <h3>Best analysis of your competitors.</h3>
               <p>
@@ -275,7 +299,11 @@ const Index = () => {
             </div>
 
             <div className="colum2">
-              <StaticImage src="../images/solution.jpg" alt="" />
+              <StaticImage
+                src="../images/solution.jpg"
+                alt="marketing image"
+                placeholder="blurred"
+              />
 
               <h3>Solutions for Best Marketing approach</h3>
               <p>
@@ -287,7 +315,11 @@ const Index = () => {
             </div>
 
             <div className="colum3">
-              <StaticImage src="../images/comprehensive.jpg" alt="" />
+              <StaticImage
+                src="../images/comprehensive.jpg"
+                alt="digital marketing image"
+                placeholder="blurred"
+              />
 
               <h3>Comprehensive Digital Marketing</h3>
               <p>
