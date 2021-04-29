@@ -14,6 +14,7 @@ const Index = props => {
         className="heropattern"
         alt="patternbg"
         placeholder="blurred"
+        formats={["AUTO", "WEBP", "AVIF"]}
       />
       <section className="main">
         <BackgroundImage
@@ -115,6 +116,7 @@ const Index = props => {
               src="../images/consultimage.jpg"
               alt="consultationimage"
               placeholder="blurred"
+              formats={["AUTO", "WEBP", "AVIF"]}
             />
           </div>
 
@@ -123,6 +125,7 @@ const Index = props => {
               src="../images/digitalimage.jpg"
               alt="digital image"
               placeholder="blurred"
+              formats={["AUTO", "WEBP", "AVIF"]}
             />
 
             <div className="digitaldiv">
@@ -170,6 +173,7 @@ const Index = props => {
               src="../images/resourceimage.jpg"
               alt="resource"
               placeholder="blurred"
+              formats={["AUTO", "WEBP", "AVIF"]}
             />
           </div>
         </div>
@@ -226,7 +230,11 @@ const Index = props => {
             <div className="marketplacewrapper1">
               <div className="subbox1">
                 <h5>Amazon Advert</h5>
-                <div className="bgimage">
+
+                <BackgroundImage
+                  className="bgimage1"
+                  fluid={props.data.advertbgImage.childImageSharp.fluid}
+                >
                   <div className="bluebg">
                     <StaticImage
                       src="../images/amazon-icon.svg"
@@ -240,12 +248,16 @@ const Index = props => {
                       e-commerce platform, Amazon.
                     </p>
                   </div>
-                </div>
+                </BackgroundImage>
               </div>
 
               <div className="subbox2">
                 <h5>E-com Cataloguing </h5>
-                <div className="bgimage">
+
+                <BackgroundImage
+                  className="bgimage2"
+                  fluid={props.data.catalogbgImage.childImageSharp.fluid}
+                >
                   <div className="greyebg">
                     <StaticImage
                       src="../images/ecat-icon.svg"
@@ -261,12 +273,16 @@ const Index = props => {
                       and goodwill.
                     </p>
                   </div>
-                </div>
+                </BackgroundImage>
               </div>
 
               <div className="subbox3">
                 <h5>E-com Branding</h5>
-                <div className="bgimage">
+
+                <BackgroundImage
+                  className="bgimage3"
+                  fluid={props.data.brandingbgImage.childImageSharp.fluid}
+                >
                   <div className="greyebg">
                     <StaticImage
                       src="../images/branding-icon.svg"
@@ -279,12 +295,15 @@ const Index = props => {
                       within and beyond borders.
                     </p>
                   </div>
-                </div>
+                </BackgroundImage>
               </div>
 
               <div className="subbox4">
-                <h5>E-com Cataloguing </h5>
-                <div className="bgimage">
+                <h5>Account Management</h5>
+                <BackgroundImage
+                  className="bgimage4"
+                  fluid={props.data.accountbgImage.childImageSharp.fluid}
+                >
                   <div className="bluebg">
                     <StaticImage src="../images/account-icon.svg" alt="" />
                     <p>
@@ -295,7 +314,7 @@ const Index = props => {
                       to manage your account needs promptly and efficiently.
                     </p>
                   </div>
-                </div>
+                </BackgroundImage>
               </div>
             </div>
           </div>
@@ -311,6 +330,7 @@ const Index = props => {
                 src="../images/best.jpg"
                 alt="benifits image"
                 placeholder="blurred"
+                formats={["AUTO", "WEBP", "AVIF"]}
               />
 
               <h3>Best analysis of your competitors.</h3>
@@ -330,6 +350,7 @@ const Index = props => {
                 src="../images/solution.jpg"
                 alt="marketing image"
                 placeholder="blurred"
+                formats={["AUTO", "WEBP", "AVIF"]}
               />
 
               <h3>Solutions for Best Marketing approach</h3>
@@ -346,6 +367,7 @@ const Index = props => {
                 src="../images/comprehensive.jpg"
                 alt="digital marketing image"
                 placeholder="blurred"
+                formats={["AUTO", "WEBP", "AVIF"]}
               />
 
               <h3>Comprehensive Digital Marketing</h3>
@@ -509,6 +531,34 @@ export const pageQuery = graphql`
     contactbgImage: file(relativePath: { eq: "contact-bg.png" }) {
       childImageSharp {
         fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    advertbgImage: file(relativePath: { eq: "amzoneadvert.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    catalogbgImage: file(relativePath: { eq: "ecom.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    brandingbgImage: file(relativePath: { eq: "branding.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    accountbgImage: file(relativePath: { eq: "account.jpg" }) {
+      childImageSharp {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }

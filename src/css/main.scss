@@ -218,21 +218,7 @@ a:active {
   margin-bottom: $m-large;
   text-shadow: 2px 2px 4px #0000001c;
 }
-.bodyimage {
-  background-image: url("../images/mainbg.png"), url("../images/patterntop.svg");
-  background-position: top right, left top;
-  background-repeat: no-repeat;
-  background-size: 53%;
 
-  background-attachment: fixed;
-}
-.bodyimage1 {
-  background-image: url("../images/patterntop.svg");
-  background-position: top right, left top;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-attachment: fixed;
-}
 .heropattern {
   background-size: contain;
   width: 50%;
@@ -277,9 +263,6 @@ a:active {
   border-style: solid;
   border-width: 1px;
   padding: 7em 3em 0em 3em;
-  // background-image: url("../images/about-pattern.svg");
-  // background-position: 332px 40px;
-  // background-repeat: no-repeat;
 }
 h1 {
   font-size: 2.9em;
@@ -364,8 +347,7 @@ h1 {
     font-weight: lighter;
   }
 
-  .bgimage {
-    background-image: url("../images/amzoneadvert.jpg");
+  .bgimage1 {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 1em;
@@ -407,8 +389,7 @@ h1 {
     font-weight: lighter;
   }
 
-  .bgimage {
-    background-image: url("../images/ecom.jpg");
+  .bgimage2 {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 1em;
@@ -449,10 +430,10 @@ h1 {
     font-weight: lighter;
   }
 
-  .bgimage {
+  .bgimage3 {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../images/branding.jpg");
+
     padding: 1em;
 
     height: 600px;
@@ -491,8 +472,7 @@ h1 {
     font-weight: lighter;
   }
 
-  .bgimage {
-    background-image: url("../images/account.jpg");
+  .bgimage4 {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 1em;
@@ -781,7 +761,6 @@ footer {
 }
 @media screen and (max-width: 550px) {
   body {
-    // background-image: url("../images/patterntop.svg");
     background-position: 1% 1%;
     background-repeat: no-repeat;
     background-size: 100%;
