@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.kartblue.com`,
+    siteUrl: `https://kartblue.com`,
     title: `We build the bridge between businesses and IT companies,`,
     description: `Karblue is a technology company that connects business and the
                 customers by providing consultancy, technology , skilled
