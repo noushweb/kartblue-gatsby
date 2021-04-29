@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://www.kartblue.com`,
     title: `We build the bridge between businesses and IT companies,`,
     description: `Karblue is a technology company that connects business and the
                 customers by providing consultancy, technology , skilled
@@ -7,6 +8,7 @@ module.exports = {
     author: `Noushad`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -19,6 +21,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
